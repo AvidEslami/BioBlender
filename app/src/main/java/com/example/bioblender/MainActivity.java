@@ -11,15 +11,19 @@ import com.chaquo.python.PyObject;
 import com.chaquo.python.Python;
 import com.chaquo.python.android.AndroidPlatform;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        TextView text1;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initPython();
-        TextView text1 = findViewById(R.id.textView1);
+        text1 = (TextView) findViewById(R.id.textView1);
         text1.setText(example());
+        example();
 
     }
 

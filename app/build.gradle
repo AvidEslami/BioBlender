@@ -21,6 +21,10 @@ android {
         }
         python {
             version "3.9"
+            pip{
+                install "aiohttp"
+                install "openai"
+            }
 //          buildPython "C:/Windows/py.exe", -3.9
         }
 
