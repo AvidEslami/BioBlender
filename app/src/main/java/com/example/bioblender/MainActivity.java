@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private String example() {
         Python python = Python.getInstance();
         PyObject pythonFile = python.getModule("Sample");
-        return pythonFile.callAttr("test", "this is working").toString();
+        return pythonFile.callAttr("test", "this is DEFINITELY working").toString();
     }
 }
 
