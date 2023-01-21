@@ -24,6 +24,7 @@ android {
             pip{
                 install "aiohttp"
                 install "openai"
+                install "google-search-results"
             }
 //          buildPython "C:/Windows/py.exe", -3.9
         }
