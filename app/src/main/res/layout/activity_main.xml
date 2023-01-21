@@ -7,10 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-<<<<<<< HEAD
         android:id="@+id/textView2"
-=======
->>>>>>> 1fefafa2a750426e79af5cfe93720cb1227e839a
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
@@ -19,7 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<<<<<<< HEAD
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -30,6 +26,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-=======
->>>>>>> 1fefafa2a750426e79af5cfe93720cb1227e839a
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,7 @@
 plugins {
     id 'com.android.application'
-<<<<<<< HEAD
     id 'com.chaquo.python'
-=======
->>>>>>> 1fefafa2a750426e79af5cfe93720cb1227e839a
+
 }
 
 android {
@@ -18,7 +16,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-<<<<<<< HEAD
+
         ndk {
             abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
         }
@@ -26,8 +24,7 @@ android {
             version "3.9"
 //          buildPython "C:/Windows/py.exe", -3.9
         }
-=======
->>>>>>> 1fefafa2a750426e79af5cfe93720cb1227e839a
+
     }
 
     buildTypes {
