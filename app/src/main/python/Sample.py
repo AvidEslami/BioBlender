@@ -2,7 +2,7 @@ import openai
 import random
 import json
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "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"
 openai.api_key = OPENAI_API_KEY
 
 def gen():
@@ -12,7 +12,7 @@ def gen():
         max_tokens=2048,
         temperature=0
     )
-    return("response.choices[0].text")
+    return(response.choices[0].text)
 
     # animals = {}
     # current_list = ""
