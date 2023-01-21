@@ -2,5 +2,8 @@
 plugins {
     id 'com.android.application' version '7.4.0' apply false
     id 'com.android.library' version '7.4.0' apply false
+<<<<<<< HEAD
     id 'com.chaquo.python' version '13.0.0' apply false
+=======
+>>>>>>> 1fefafa2a750426e79af5cfe93720cb1227e839a
 }
