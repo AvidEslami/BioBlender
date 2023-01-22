@@ -2,7 +2,7 @@ import openai
 import random
 import time
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "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"
 openai.api_key = OPENAI_API_KEY
 
 animals = []

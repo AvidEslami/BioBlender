@@ -21,6 +21,7 @@ public class NewAnimal extends AppCompatActivity {
         name = i.getStringExtra("name");
         description = i.getStringExtra("description");
         URL = i.getStringExtra("URL");
+        System.out.println("Java URL check: " + URL);
         reason = i.getStringExtra("reason");
         picture = findViewById(R.id.imageView1);
         new ImageLoadTask(URL, picture).execute();

@@ -42,7 +42,7 @@ public class BlenderActivity extends AppCompatActivity implements View.OnClickLi
                 Intent intent = new Intent(this, NewAnimal.class);
                 intent.putExtra("name", name);
                 intent.putExtra("description", description);
-                intent.putExtra("ULR", URL);
+                intent.putExtra("URL", URL);
                 intent.putExtra("reason", reason);
                 startActivity(intent);
                 break;
