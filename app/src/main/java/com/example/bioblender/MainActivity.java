@@ -2,41 +2,35 @@ package com.example.bioblender;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
-import android.graphics.drawable.Icon;
-import android.media.Image;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.chaquo.python.PyObject;
 import com.chaquo.python.Python;
 import com.chaquo.python.android.AndroidPlatform;
 
-import org.w3c.dom.Text;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-
-import kotlin.text.UStringsKt;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        TextView text1;
-        ImageView animal;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initPython();
-        text1 = (TextView) findViewById(R.id.textView1);
-//        animal = (ImageView) findViewById(R.id.imageAnimal);
-        text1.setText(example());
-//        animal.setImageIcon(findImage());
-        example();
+        Button playButton = findViewById(R.id.playbtn);
+        playButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BlenderActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initPython() {
