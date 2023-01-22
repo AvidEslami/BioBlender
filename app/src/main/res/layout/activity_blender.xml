@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BlenderActivity">
-
+    tools:context=".BlenderActivity"
+    android:background="@drawable/backgroundgrad">
     <Button
         android:id="@+id/blendbtn"
         android:layout_width="wrap_content"

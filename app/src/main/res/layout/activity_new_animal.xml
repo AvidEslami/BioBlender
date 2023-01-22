@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".NewAnimal">
-
+    tools:context=".NewAnimal"
+    android:background="@drawable/backgroundgrad">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
