@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initPython() {
-        Python.start(new AndroidPlatform(this));
+        if (!Python.isStarted())
+            Python.start(new AndroidPlatform(this));
     }
 
     private String example() {
