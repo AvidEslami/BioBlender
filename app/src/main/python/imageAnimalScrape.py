@@ -19,6 +19,7 @@ def serpapi_get_google_images(prompt):
         if image["original"] not in image_results:
             image_results.append(image["original"])
             # print(image_results)
+            print(image_results[0])
             return(image_results[0])
 
 

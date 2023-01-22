@@ -37,7 +37,7 @@ public class BlenderActivity extends AppCompatActivity implements View.OnClickLi
                 description = pythonFile.callAttr("generate_description", name).toString();
                 reason = pythonFile.callAttr("explain_why", animal1, animal2, name).toString();
                 PyObject pythonFile2 = python.getModule("imageAnimalScrape");
-                name = pythonFile2.callAttr("serpapi_get_google_images", name).toString();
+                URL = pythonFile2.callAttr("serpapi_get_google_images", name).toString();
 
                 Intent intent = new Intent(this, NewAnimal.class);
                 intent.putExtra("name", name);
