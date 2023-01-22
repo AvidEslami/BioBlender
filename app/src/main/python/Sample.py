@@ -2,8 +2,12 @@ import openai
 import random
 import json
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "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"
 openai.api_key = OPENAI_API_KEY
+
+animals = {}
+
+# def addAnimal():
 
 def gen():
     response = openai.Completion.create(
