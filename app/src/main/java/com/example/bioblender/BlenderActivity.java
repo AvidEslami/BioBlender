@@ -46,6 +46,21 @@ public class BlenderActivity extends AppCompatActivity implements View.OnClickLi
                 intent.putExtra("reason", reason);
                 startActivity(intent);
                 break;
+            case R.id.Rand1:
+                Python python2 = Python.getInstance();
+                PyObject py1 = python2.getModule("AI");
+                String random_animal1 = py1.callAttr("generateAnimal").toString();
+                EditText text1 = findViewById(R.id.animal1);
+                text1.setText(random_animal1);
+                break;
+
+            case R.id.Rand2:
+                Python python3 = Python.getInstance();
+                PyObject py2 = python3.getModule("AI");
+                String random_animal2 = py2.callAttr("generateAnimal").toString();
+                EditText text2 = findViewById(R.id.animal2);
+                text2.setText(random_animal2);
+                break;
             default:
                 Toast.makeText(this, "You Died", Toast.LENGTH_SHORT).show();
                 break;
@@ -60,5 +75,10 @@ public class BlenderActivity extends AppCompatActivity implements View.OnClickLi
         an2 = findViewById(R.id.animal2); // Second animal view
         Button mixButton = findViewById(R.id.blendbtn);
         mixButton.setOnClickListener(this);
+        Button rand1 = findViewById(R.id.Rand1);
+        rand1.setOnClickListener(this);
+
+        Button rand2 = findViewById(R.id.Rand2);
+        rand2.setOnClickListener(this);
     }
 }

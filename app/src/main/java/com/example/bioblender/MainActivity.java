@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initPython();
         Button playButton = findViewById(R.id.playbtn);
-        Button playGameButton = findViewById(R.id.playbtn2);
+        //Button playGameButton = findViewById(R.id.playbtn2);
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        playGameButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, GameMode.class);
-                startActivity(intent);
-            }
-        });
+//        playGameButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, GameMode.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     private void initPython() {
