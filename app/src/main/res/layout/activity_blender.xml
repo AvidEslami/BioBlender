@@ -8,26 +8,11 @@
     android:background="@drawable/background2">
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="100px"
-        android:text="Warning: Getting result may take 5-20 seconds. Please wait patiently and don't close your app :)"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.879" />
-
-    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingHorizontal="100px"
-        android:text="How To Use:\nInsert or randomly generate the names of two different animals, then press the 'BLEND' button to load an animal that combines aspects of the two.\n\n10 interesting facts and an explanation of how this animal was found are given."
+        android:text="How To Use:\nInsert or randomly generate the names of two different animals, then press the 'BLEND' button to load an animal that combines aspects of the two!"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/Rand1"
@@ -35,23 +20,33 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578" />
+        app:layout_constraintVertical_bias="0.66" />
 
     <Button
-        android:id="@+id/blendbtn"
+        android:id="@+id/Rand1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BLEND"
-        android:textColor="#ffffff"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:backgroundTint="#f7503e"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="#00ad40"
+        android:text="Randomize"
+        app:layout_constraintBottom_toTopOf="@+id/animal1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.73" />
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/Rand2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00ad40"
+        android:text="Randomize"
+        app:layout_constraintBottom_toTopOf="@+id/animal2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/animal1"
@@ -68,20 +63,22 @@
         app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.569" />
+        app:layout_constraintVertical_bias="0.537" />
 
-    <Button
-        android:id="@+id/Rand1"
+    <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#00ad40"
-        android:text="Randomize"
-        app:layout_constraintBottom_toTopOf="@+id/animal1"
+        android:paddingHorizontal="100px"
+        android:text="Warning: Getting result may take 5-20 seconds. Please wait patiently and don't close your app :)"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.848" />
 
     <EditText
         android:id="@+id/animal2"
@@ -98,19 +95,22 @@
         app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.569" />
+        app:layout_constraintVertical_bias="0.537" />
 
     <Button
-        android:id="@+id/Rand2"
+        android:id="@+id/blendbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#00ad40"
-        android:text="Randomize"
-        app:layout_constraintBottom_toTopOf="@+id/animal2"
+        android:text="BLEND"
+        android:textColor="#ffffff"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:backgroundTint="#f7503e"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.698" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
