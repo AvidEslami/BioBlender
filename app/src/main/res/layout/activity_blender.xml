@@ -6,6 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".BlenderActivity"
     android:background="@drawable/backgroundgrad">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="100px"
+        android:text="How To Use:\n Insert or randomly generate the names of two different animals, then press the 'BLEND' button to load an animal that combines aspects of the two. \n\n 10 interesting facts and an explication of how this animal was found are given."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/Rand1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.835" />
+
+    <Button
+        android:id="@+id/Rand1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Randomize"
+        app:layout_constraintBottom_toTopOf="@+id/animal1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/animal2"
+        android:layout_width="168dp"
+        android:layout_height="58dp"
+        android:ellipsize="start"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Animal Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.515" />
+
     <Button
         android:id="@+id/blendbtn"
         android:layout_width="wrap_content"
@@ -20,51 +63,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.651" />
-
-    <EditText
-        android:id="@+id/animal1"
-        android:layout_width="168dp"
-        android:layout_height="58dp"
-        android:ems="10"
-        android:hint="Animal Name"
-        android:inputType="textPersonName"
-        android:ellipsize="start"
-        android:gravity="center_horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.392" />
-
-    <EditText
-        android:id="@+id/animal2"
-        android:layout_width="168dp"
-        android:layout_height="58dp"
-        android:ems="10"
-        android:hint="Animal Name"
-        android:inputType="textPersonName"
-        android:ellipsize="start"
-        android:gravity="center_horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.934"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.392" />
-
-    <Button
-        android:id="@+id/Rand1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Randomize"
-        app:layout_constraintBottom_toTopOf="@+id/animal1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.722" />
 
     <Button
         android:id="@+id/Rand2"
@@ -73,9 +72,25 @@
         android:text="Randomize"
         app:layout_constraintBottom_toTopOf="@+id/animal2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintHorizontal_bias="0.871"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/animal1"
+        android:layout_width="168dp"
+        android:layout_height="58dp"
+        android:ellipsize="start"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Animal Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.515" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
