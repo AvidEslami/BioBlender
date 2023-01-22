@@ -1,7 +1,7 @@
 import openai
 import random
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "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"
 openai.api_key = OPENAI_API_KEY
 
 animals = {} #read file on load --> add both formatted and unformatted animals
@@ -9,12 +9,13 @@ formatted_animals = []
 unformatted_animals = []
 
 def set_animal(formatted_string, unformatted_string):
-    formatted_animals = formatted_string.split("||")
-    unformatted_animals = unformatted_string.split(" ")
-    for i, animal in enumerate(formatted_animals):
-        pars = animal.split(" - ")
-        values = dic[1].split(", ")
-        animals[dic[0]] = values
+    if formatted_string != None:
+        formatted_animals = formatted_string.split("||")
+        unformatted_animals = unformatted_string.split(" ")
+        for i, animal in enumerate(formatted_animals):
+            pars = animal.split(" - ")
+            values = dic[1].split(", ")
+            animals[dic[0]] = values
 
 def addAnimal(txt):
     txt = txt.replace("\n", "")
@@ -56,6 +57,19 @@ def generateAnimal():
     )
     txt = response.choices[0].text
     addAnimal(txt)
+
+def check_animal(animal):
+    response = openai.Completion.create(
+        model="text-davinci-003",
+        prompt="is a "+animal+" an animal? Type [yes] if yes, otherwise type [no]",
+        max_tokens=2048,
+        temperature=0
+    )
+    txt = response.choices[0].text
+    txt = txt.replace("\n", "")
+    print(txt)
+    if txt.lower() == "yes": return True
+    else: return False
 
 def get_unformatted():
     return " ".join(unformatted_animals)
