@@ -7,11 +7,11 @@
     tools:context=".BlenderActivity">
 
     <Button
-        android:id="@+id/btn1"
+        android:id="@+id/blendbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BLEND"
-        android:textColor="#9cff9f"
+        android:textColor="#ffffff"
         android:textSize="36sp"
         android:textStyle="bold"
         app:backgroundTint="#0009b8"
@@ -29,6 +29,8 @@
         android:ems="10"
         android:hint="Animal Name"
         android:inputType="textPersonName"
+        android:ellipsize="start"
+        android:gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.065"
@@ -43,23 +45,13 @@
         android:ems="10"
         android:hint="Animal Name"
         android:inputType="textPersonName"
+        android:ellipsize="start"
+        android:gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.392" />
-
-    <Button
-        android:id="@+id/backbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Back"
-        app:backgroundTint="#fc0303"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

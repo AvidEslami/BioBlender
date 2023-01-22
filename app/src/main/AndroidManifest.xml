@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/blender_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.BioBlender"
@@ -14,11 +14,13 @@
         <activity
             android:name=".NewAnimal"
             android:label="Explore Your Animal!"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".BlenderActivity"/>
         <activity
             android:name=".BlenderActivity"
             android:label="Blender"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
