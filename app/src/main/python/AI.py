@@ -2,7 +2,7 @@ import openai
 import random
 import time
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "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"
 openai.api_key = OPENAI_API_KEY
 
 animals = []
@@ -55,7 +55,6 @@ def compareAnimals(animal_1, animal_2):
         time.sleep(3)
 
     addAnimal(animal_blend)
-    print(traits)
     return animal_blend.replace("\n", "")
 
 def generateAnimal():
@@ -73,7 +72,6 @@ def generateAnimal():
         txt = txt.replace(".", "")
         if txt not in animals:
             break
-        print("Generated Dup: "+txt)
         time.sleep(3)
 
     addAnimal(txt)
@@ -88,7 +86,6 @@ def check_animal(animal):
     )
     txt = response.choices[0].text
     txt = txt.replace("\n", "")
-    print(txt)
     if txt.lower() == "yes": return True
     else: return False
 
