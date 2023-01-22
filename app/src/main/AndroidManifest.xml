@@ -12,7 +12,12 @@
         android:theme="@style/Theme.BioBlender"
         tools:targetApi="31">
         <activity
+            android:name=".NewAnimal"
+            android:label="Explore Your Animal!"
+            android:exported="false" />
+        <activity
             android:name=".BlenderActivity"
+            android:label="Blender"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
