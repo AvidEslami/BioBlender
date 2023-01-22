@@ -18,9 +18,9 @@ import com.chaquo.python.Python;
 public class BlenderActivity extends AppCompatActivity implements View.OnClickListener{
 
     private EditText an1;
-    String animal1 = an1.getText().toString();
+
     private EditText an2;
-    String animal2 = an2.getText().toString();
+
 
     private String name;
     private String description;
@@ -31,6 +31,8 @@ public class BlenderActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn1:
+                String animal1 = an1.getText().toString();
+                String animal2 = an2.getText().toString();
 
                 Python python = Python.getInstance();
                 PyObject pythonFile = python.getModule("AI");
