@@ -2,7 +2,7 @@ import openai
 import random
 import time
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "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"
 openai.api_key = OPENAI_API_KEY
 
 animals = []
@@ -20,19 +20,23 @@ def compareAnimals(animal_1, animal_2):
 
     traits1 = openai.Completion.create(
         model="text-davinci-003",
-        prompt="Provide 2 random traits associated with a "+animal_1+"",
+        prompt="Provide 2 random traits associated with a "+animal_1+". Separate traits with comma.",
         max_tokens=2048,
         temperature=0
     )
+    traits1 = traits1.choices[0].text.replace("\n", "")
+    traits1 = traits1.split(",")
 
     traits2 = openai.Completion.create(
         model="text-davinci-003",
-        prompt="Provide 2 random traits associated with a "+animal_2+"",
+        prompt="Provide 2 random traits associated with a "+animal_2+". Separate traits with comma.",
         max_tokens=2048,
         temperature=0
     )
+    traits2 = traits2.choices[0].text.replace("\n", "")
+    traits2 = traits2.split(",")
 
-    all_traits = traits1.choices[0].text + traits2.choices[0].text
+    all_traits = traits1 + traits2
     traits = random.sample(all_traits, 2)
     animal_blend = ""
     while True:
