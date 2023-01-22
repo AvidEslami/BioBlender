@@ -27,5 +27,10 @@ public class NewAnimal extends AppCompatActivity {
         new ImageLoadTask(URL, picture).execute();
         TextView animal = findViewById(R.id.animal_name);
         animal.setText(name);
+        TextView info = findViewById(R.id.animal_info);
+        info.setText(description);
+        TextView why = findViewById(R.id.animal_reason);
+        why.setText(reason);
+
     }
 }
