@@ -19,7 +19,7 @@
             <ImageView
                 android:id="@+id/imageView1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="300sp"
                 tools:srcCompat="@drawable/ic_launcher_background" />
 
             <TextView
@@ -32,7 +32,17 @@
                 android:text="TextView"
                 android:textSize="28sp"
                 android:gravity="center"/>
-
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:text="What are they like?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="left"/>
             <TextView
                 android:id="@+id/animal_info"
                 android:layout_width="match_parent"
@@ -42,6 +52,18 @@
                 android:layout_marginRight="15sp"
                 android:text="TextView"
                 android:textSize="16sp"
+                android:gravity="left"/>
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:text="How they are similar?"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:gravity="left"/>
 
             <TextView
