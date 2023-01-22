@@ -4,7 +4,7 @@ def serpapi_get_google_images(prompt):
     image_results = []
     params = {
             "engine": "google",               # search engine. Google, Bing, Yahoo, Naver, Baidu...
-            "q": prompt,                       # search query
+            "q": prompt + " animal",                       # search query
             "tbm": "isch",                    # image results
             "num": "2",                     # number of images per page
             "ijn": 0,                         # page number: 0 -> first page, 1 -> second...
