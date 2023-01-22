@@ -11,16 +11,35 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.chaquo.python.PyObject;
+import com.chaquo.python.Python;
+
 public class BlenderActivity extends AppCompatActivity implements View.OnClickListener{
 
     private EditText an1;
+    String animal1 = an1.getText().toString();
     private EditText an2;
+    String animal2 = an2.getText().toString();
+
+    private String name;
+    private String description;
+    private String URL;
+    private String reason;
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn1:
-                //result.setText(an1.getText().toString() + " + " + an2.getText().toString() + "= ESLAMI!!");
+
+                Python python = Python.getInstance();
+                PyObject pythonFile = python.getModule("AI");
+                name = pythonFile.callAttr("compareAnimals", animal1, animal2).toString();
+                description = pythonFile.callAttr("generate_description", name).toString();
+                reason = pythonFile.callAttr("explain_why", animal1, animal2, name).toString();
+                PyObject pythonFile2 = python.getModule("imageAnimalScrape");
+                name = pythonFile2.callAttr("serpapi_get_google_images", name).toString();
+
                 Intent intent1 = new Intent(this, NewAnimal.class);
                 startActivity(intent1);
                 break;
@@ -44,5 +63,7 @@ public class BlenderActivity extends AppCompatActivity implements View.OnClickLi
         mixButton.setOnClickListener(this);
         Button backButton = findViewById(R.id.backbtn);
         backButton.setOnClickListener(this);
+
+
     }
 }
