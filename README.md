@@ -14,3 +14,4 @@ https://devpost.com/software/bioblender
 ## What's next for BioBlender
 - Game Mode (combining a list of randomly generated animals with the goal of reaching an imposed destination animal), Game Mode could also include an achievement system which would give the user in-app rewards for meeting certain criteria with their pool of generated animals (eg: 10 animals from South America, or 5 animals that have sharp claws).
 - Save feature to save the generated information page for unique and interesting animals.
+ 
